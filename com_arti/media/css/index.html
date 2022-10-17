@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Jnilla Form</title>
+
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+		<link href="../assets/css/jnilla-form.css" rel="stylesheet" type="text/css" />
+		<script src="../assets/js/jnilla-form.js"></script>
+
+
+		<script type="text/javascript">
+			(function($){
+				$(document).on('ready', function(){
+					$('.toggle-json-field').on('click', function(){
+						$('.jnilla-form').toggle();
+					});
+				});
+			})(jQuery);
+		</script>
+	</head>
+	<body>
+		<h1>Jnilla Form</h1>
+
+		<p>JSON based dynamic form generator.</p>
+
+		<p>Click the button to visualize each form data in JSON format.</p>
+
+		<div class="btn toggle-json-field">Toggle JSON Field</div>
+
+		<hr />
+
+		<div class="form-horizontal">
+
+			<div class="control-group">
+				<label class="control-label">Live Mode</label>
+				<div class="controls">
+					<textarea class="jnilla-form"></textarea>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="control-group">
+				<label class="control-label">Edit Mode</label>
+				<div class="controls">
+					<textarea class="jnilla-form jnilla-form-edit"></textarea>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

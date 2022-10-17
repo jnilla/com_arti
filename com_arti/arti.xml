@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_ARTI</name>
+	<author>jnilla.com</author>
+	<creationDate>2022-10-10</creationDate>
+	<copyright>Copyright (C) 2022 jnilla.com. All rights reserved.</copyright>
+	<license>MIT</license>
+	<authorEmail>digitalcomputer2142@gmail.com</authorEmail>
+	<authorUrl>https://github.com/jnilla</authorUrl>
+	<version>0.0.0</version>
+	<description>COM_ARTI_XML_DESCRIPTION</description>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Arti">https://www.jnilla.com/update-server/com_arti/updates.xml</server>
+	</updateservers>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	
+	<media destination="com_arti" folder="media">
+		<folder>img</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+	
+	<administration>
+		<menu>COM_ARTI</menu>
+		
+		<files folder="admin">
+			<folder>language</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>libs</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>framework-configurations.php</filename>
+			<filename>arti.php</filename>
+		</files>
+	</administration>
+
+</extension>
+
+
+
+
+

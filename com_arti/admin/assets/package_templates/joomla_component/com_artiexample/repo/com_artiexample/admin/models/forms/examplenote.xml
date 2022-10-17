@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<!-- Regular fields -->
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="status"
+			label="COM_ARTIEXAMPLE_FIELD_STATUS"
+			type="list"
+			default="active"
+			required="true"
+			>
+			<option value="">COM_ARTIEXAMPLE_OPTION_HEADER_STATUS</option>
+			<option value="active">COM_ARTIEXAMPLE_OPTION_ACTIVE</option>
+			<option value="inactive">COM_ARTIEXAMPLE_OPTION_INACTIVE</option>
+		</field>
+		<field
+			name="title"
+			type="text"
+			label="COM_ARTIEXAMPLE_FIELD_TITLE"
+			required="true"
+		/>
+		<field
+			name="note"
+			type="textarea"
+			label="COM_ARTIEXAMPLE_FIELD_NOTE"
+			class="span6"
+			rows="15"
+		/>
+	</fields>
+</form>
+
+
+
+
