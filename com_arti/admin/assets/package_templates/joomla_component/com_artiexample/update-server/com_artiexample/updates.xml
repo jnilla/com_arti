@@ -1,0 +1,22 @@
+<updates>
+	<update>
+		<version>0.0.0</version>
+		<name>update_file_package_title</name>
+		<description>update_file_package_description</description>
+		
+		<element>update_file_package_filename</element>
+		<type>component</type>
+		<client>administrator</client>
+		
+		<targetplatform name="joomla" version=".*" />
+		<php_minimum>7.1</php_minimum>
+		
+		<downloads>
+			<downloadurl type="full" format="zip">https://example.com/update-server/com_example/com_example-v0.0.0.zip</downloadurl>
+		</downloads>
+	</update>
+</updates>
+
+
+
+

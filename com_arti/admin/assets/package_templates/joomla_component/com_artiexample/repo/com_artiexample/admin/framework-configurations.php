@@ -6,11 +6,17 @@ $frameworkConfigurations = [
 	"defaultViewNameInLowerCase" => "examplenotes",
 	'sidebarItemNamesInLowerCase' => [
 		'examplenotes',
+
+		/*DO_NOT_DELETE_THIS_COMMENT_01*/
+		
 	],
+	
+	/*DO_NOT_DELETE_THIS_COMMENT_02*/
+	
 	'ArtiExampleViewExampleNotes' => [
 		'toolbar' => [
-			'iconClass' => 'icon-cube', // Bootstrap icon class
-			'buttons' => [ // List of toolbar buttons
+			'iconClass' => 'icon-cube',
+			'buttons' => [
 				[
 					'type' => 'add'
 				],

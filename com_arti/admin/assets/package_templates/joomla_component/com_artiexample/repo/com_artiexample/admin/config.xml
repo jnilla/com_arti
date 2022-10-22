@@ -13,7 +13,7 @@
 		/>
 	</fieldset>
 
-	<!-- Component Global Permissions (ACL) -->
+	<!-- Component Permissions (ACL) -->
 	<fieldset
 		name="permissions"
 		label="JCONFIG_PERMISSIONS_LABEL"

@@ -1,116 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<fields>
-		<!-- Regular fields -->
+		<fieldset 
+			name="build" 
+			label="COM_ARTI_FIELDSET_BUILD_CONFIG"
+			>
+			<field 
+				name="note_documentation" 
+				type="spacer" 
+				label="COM_ARTI_NOTE_DOCUMENTATION"
+			/>
+			<field
+				name="type"
+				type="list"
+				label="COM_ARTI_FIELD_TYPE"
+				required="true"
+				>
+				<option value="">COM_ARTI_OPTION_HEADER_TYPE</option>
+				<option value="joomla_component">COM_ARTI_OPTION_JOOMLA_COMPONENT</option>
+				<option value="joomla_frontend_module">COM_ARTI_OPTION_JOOMLA_FRONTEND_MODULE</option>
+				<option value="joomla_system_pluglin">COM_ARTI_OPTION_JOOMLA_SYSTEM_PLUGIN</option>
+				<option value="joomla_content_pluglin">COM_ARTI_OPTION_JOOMLA_CONTENT_PLUGIN</option>
+				<option value="joomla_library">COM_ARTI_OPTION_JOOMLA_LIBRARY</option>
+				<option value="composer_library">COM_ARTI_OPTION_COMPOSER_LIBRARY</option>
+			</field>
+			<field
+				name="name"
+				type="text"
+				label="COM_ARTI_FIELD_PACKAGE_NAME"
+				required="true"
+			/>
+			<field
+				name="package_filename"
+				type="text"
+				label="COM_ARTI_FIELD_PACKAGE_FILENAME"
+				readonly="true"
+			/>
+			<field
+				name="package_base_path"
+				type="text"
+				label="COM_ARTI_FIELD_PACKAGE_BASE_PATH"
+				class="span6"
+				required="true"
+			/>
+			<field
+				name="package_path"
+				type="text"
+				label="COM_ARTI_FIELD_PACKAGE_PATH"
+				class="span6"
+				readonly="true"
+			/>
+		</fieldset>
+		<fieldset 
+			name="manifest" 
+			label="COM_ARTI_TAB_MANIFEST"
+			>
+			<field
+				name="id"
+				type="hidden"
+			/>
+			<field
+				name="version"
+				type="text"
+				label="COM_ARTI_FIELD_VERSION"
+				required="true"
+				default="0.0.0"
+			/>
+			<field
+				name="title"
+				type="text"
+				label="COM_ARTI_FIELD_TITLE"
+				required="true"
+			/>
+			<field
+				name="description"
+				type="text"
+				label="COM_ARTI_FIELD_DESCRIPTION"
+				class="span6"
+				maxlength="200"
+				required="true"
+			/>
+			<field
+				name="author"
+				type="text"
+				label="COM_ARTI_FIELD_AUTHOR"
+				required="true"
+			/>
+			<field
+				name="author_email"
+				type="text"
+				label="COM_ARTI_FIELD_AUTHOR_EMAIL"
+				required="true"
+			/>
+			<field
+				name="author_url"
+				type="text"
+				label="COM_ARTI_FIELD_AUTHOR_URL"
+				required="true"
+			/>
+			<field
+				name="update_server_base_url"
+				type="text"
+				label="COM_ARTI_FIELD_UPDATE_SERVER_BASE_URL"
+				class="span6"
+				default="https://.com/update-server/"
+			/>
+			<field
+				name="update_server_manifest_url"
+				type="text"
+				label="COM_ARTI_FIELD_UPDATE_SERVER_MANIFEST_URL"
+				class="span6"
+				readonly="true"
+			/>
+		</fieldset>
+		
+
+		<!-- No fieldset -->
 		<field
-			name="id"
-			type="hidden"
-		/>
-		<field 
-			name="note_documentation" 
-			type="spacer" 
-			label="COM_ARTI_NOTE_DOCUMENTATION"
+			name="new_html_view_name"
+			type="text"
+			label="COM_ARTI_FIELD_NEW_HTML_VIEW_NAME"
 		/>
 		<field
-			name="type"
+			name="new_crud_view_name"
+			type="text"
+			label="COM_ARTI_FIELD_NEW_CRUD_VIEW_NAME"
+		/>
+		<field
+			name="new_crud_view_side"
 			type="list"
-			label="COM_ARTI_FIELD_TYPE"
-			required="true"
-		>
-			<option value="">COM_ARTI_OPTION_HEADER_TYPE</option>
-			<option value="joomla_component">COM_ARTI_OPTION_JOOMLA_COMPONENT</option>
-			<option value="joomla_frontend_module">COM_ARTI_OPTION_JOOMLA_FRONTEND_MODULE</option>
-			<option value="joomla_system_pluglin">COM_ARTI_OPTION_JOOMLA_SYSTEM_PLUGIN</option>
-			<option value="joomla_content_pluglin">COM_ARTI_OPTION_JOOMLA_CONTENT_PLUGIN</option>
-			<option value="joomla_library">COM_ARTI_OPTION_JOOMLA_LIBRARY</option>
-			<option value="composer_library">COM_ARTI_OPTION_COMPOSER_LIBRARY</option>
+			label="COM_ARTI_FIELD_SIDE"
+			>
+			<option value="both">COM_ARTI_OPTION_BOTH</option>
+			<option value="frontend">COM_ARTI_OPTION_BACKEND</option>
+			<option value="backend">COM_ARTI_OPTION_FRONTEND</option>
 		</field>
 		<field
-			name="title"
-			type="text"
-			label="COM_ARTI_FIELD_TITLE"
-			required="true"
-		/>
-		<field 
-			name="instructions_field_title" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_TITLE"
-		/>
+			name="new_form_field_table"
+			type="list"
+			label="COM_ARTI_FIELD_TABLE_NAME"
+			>
+			<option value="">LIB_LARA_OPTION_HEADER_SELECT</option>
+		</field>
 		<field
-			name="description"
-			type="text"
-			label="COM_ARTI_FIELD_DESCRIPTION"
-			class="span6"
-			maxlength="200"
-			required="true"
-		/>
-		<field 
-			name="instructions_field_description" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_DESCRIPTION"
-		/>
-		<field
-			name="author"
-			type="text"
-			label="COM_ARTI_FIELD_AUTHOR"
-			required="true"
-		/>
-		<field
-			name="instructions_field_author" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_AUTHOR"
-		/>
-		<field
-			name="author_email"
-			type="text"
-			label="COM_ARTI_FIELD_AUTHOR_EMAIL"
-			required="true"
-		/>
-		<field
-			name="author_url"
-			type="text"
-			label="COM_ARTI_FIELD_AUTHOR_URL"
-			required="true"
-		/>
-		<field
-			name="instructions_field_author_url" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_AUTHOR_URL"
-		/>
-		<field
-			name="name"
-			type="text"
-			label="COM_ARTI_FIELD_NAME"
-			required="true"
-		/>
-		<field 
-			name="instructions_field_package_name" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_PACKAGE_NAME"
-		/>
-		<field
-			name="project_path"
-			type="text"
-			label="COM_ARTI_FIELD_PROJECT_PATH"
-			class="span6"
-			required="true"
-		/>
-		<field 
-			name="instructions_field_project_path" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_PROJECT_PATH"
-		/>
-		<field
-			name="update_server_url"
-			type="text"
-			label="COM_ARTI_FIELD_UPDATE_SERVER_URL"
-			class="span6"
-		/>
-		<field
-			name="instructions_field_update_server_url" 
-			type="spacer" 
-			label="COM_ARTI_INSTRUCTIONS_FIELD_UPDATE_SERVER_URL"
-		/>
+			name="new_form_fields"
+			type="subform"
+			label="COM_ARTI_FIELD_FIELDS"
+			multiple="true"
+			min="1"
+			>
+			<form>
+				<field
+					name="field_name"
+					type="text"
+					label="COM_ARTI_FIELD_FIELD_NAME"
+				/>
+				<field
+					name="type"
+					type="list"
+					label="COM_ARTI_FIELD_TYPE"
+					>
+					<option value="varchar_255">COM_ARTI_OPTION_VARCHAR_255</option>
+					<option value="text">COM_ARTI_OPTION_TEXT</option>
+					<option value="mediumtext">COM_ARTI_OPTION_MEDIUMTEXT</option>
+					<option value="longtext">COM_ARTI_OPTION_LONGTEXT</option>
+					<option value="int">COM_ARTI_OPTION_INT</option>
+					<option value="tinyint_1">COM_ARTI_OPTION_BOOLEAN</option>
+				</field>
+			</form>
+		</field>
+		<!-- No fieldset - End -->
 	</fields>
 </form>
 

@@ -4,10 +4,13 @@ defined('_JEXEC') or die;
 $frameworkConfigurations = [
 	'componentNameInPascalCase' => 'ArtiExample',
 	"defaultViewNameInLowerCase" => "examplenotes",
+
+	/*DO_NOT_DELETE_THIS_COMMENT_01*/
+
 	'ArtiExampleViewExampleNotes' => [
 		'toolbar' => [
-			'iconClass' => 'icon-cube', // Bootstrap icon class
-			'buttons' => [ // List of toolbar buttons
+			'iconClass' => 'icon-cube',
+			'buttons' => [
 				[
 					'type' => 'add'
 				],

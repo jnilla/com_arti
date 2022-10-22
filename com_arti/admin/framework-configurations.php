@@ -62,13 +62,6 @@ $frameworkConfigurations = [
 				[
 					'type' => 'cancel'
 				],
-				[
-					'type' => 'custom',
-					'iconClass' => 'icon-play',
-					'task' => 'package.initializepackage',
-					'text' => 'COM_ARTI_BUTTON_INITIALIZE_PACKAGE',
-					'listSelected' => false,
-				],
 			]
 		]
 	],
