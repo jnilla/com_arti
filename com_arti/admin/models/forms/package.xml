@@ -136,6 +136,11 @@
 			<option value="backend">COM_ARTI_OPTION_FRONTEND</option>
 		</field>
 		<field
+			name="new_table_name"
+			type="text"
+			label="COM_ARTI_FIELD_NEW_TABLE_NAME"
+		/>
+		<field
 			name="new_form_field_table"
 			type="list"
 			label="COM_ARTI_FIELD_TABLE_NAME"
@@ -143,32 +148,25 @@
 			<option value="">LIB_LARA_OPTION_HEADER_SELECT</option>
 		</field>
 		<field
-			name="new_form_fields"
-			type="subform"
-			label="COM_ARTI_FIELD_FIELDS"
-			multiple="true"
-			min="1"
+			name="new_form_field_name"
+			type="text"
+			label="COM_ARTI_FIELD_NEW_FORM_FIELD_NAME"
+		/>
+		<field
+			name="new_form_field_type"
+			type="list"
+			label="COM_ARTI_FIELD_TYPE"
 			>
-			<form>
-				<field
-					name="field_name"
-					type="text"
-					label="COM_ARTI_FIELD_FIELD_NAME"
-				/>
-				<field
-					name="type"
-					type="list"
-					label="COM_ARTI_FIELD_TYPE"
-					>
-					<option value="varchar_255">COM_ARTI_OPTION_VARCHAR_255</option>
-					<option value="text">COM_ARTI_OPTION_TEXT</option>
-					<option value="mediumtext">COM_ARTI_OPTION_MEDIUMTEXT</option>
-					<option value="longtext">COM_ARTI_OPTION_LONGTEXT</option>
-					<option value="int">COM_ARTI_OPTION_INT</option>
-					<option value="tinyint_1">COM_ARTI_OPTION_BOOLEAN</option>
-				</field>
-			</form>
+			<option value="varchar_255">COM_ARTI_OPTION_VARCHAR_255</option>
+			<option value="datetime">COM_ARTI_OPTION_DATETIME</option>
+			<option value="text">COM_ARTI_OPTION_TEXT</option>
+			<option value="mediumtext">COM_ARTI_OPTION_MEDIUMTEXT</option>
+			<option value="longtext">COM_ARTI_OPTION_LONGTEXT</option>
+			<option value="int">COM_ARTI_OPTION_INT</option>
+			<option value="float">COM_ARTI_OPTION_FLOAT</option>
+			<option value="boolean">COM_ARTI_OPTION_BOOLEAN</option>
 		</field>
+		
 		<!-- No fieldset - End -->
 	</fields>
 </form>

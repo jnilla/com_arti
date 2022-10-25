@@ -4,9 +4,8 @@ defined('_JEXEC') or die;
 $frameworkConfigurations = [
 	'componentNameInPascalCase' => 'ArtiExample',
 	"defaultViewNameInLowerCase" => "examplenotes",
-
-	/*DO_NOT_DELETE_THIS_COMMENT_01*/
-
+	/*DO_NOT_DELETE_THIS_COMMENT___NEW_ITEMS*/
+	/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS*/
 	'ArtiExampleViewExampleNotes' => [
 		'toolbar' => [
 			'iconClass' => 'icon-cube',
@@ -62,6 +61,7 @@ $frameworkConfigurations = [
 			]
 		]
 	],
+	/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS_END*/
 ];
 
 

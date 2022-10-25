@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<fields>
-
 		<!--DO_NOT_DELETE_THIS_COMMENT_01-->
-
 		<fieldset 
 			name="manifest" 
 			label="COM_ARTIEXAMPLE_TAB_BASIC"

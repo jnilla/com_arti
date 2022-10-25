@@ -5,14 +5,11 @@ $frameworkConfigurations = [
 	'componentNameInPascalCase' => 'ArtiExample',
 	"defaultViewNameInLowerCase" => "examplenotes",
 	'sidebarItemNamesInLowerCase' => [
+		/*DO_NOT_DELETE_THIS_COMMENT___SIDEBAR_ITEMS*/
 		'examplenotes',
-
-		/*DO_NOT_DELETE_THIS_COMMENT_01*/
-		
 	],
-	
-	/*DO_NOT_DELETE_THIS_COMMENT_02*/
-	
+	/*DO_NOT_DELETE_THIS_COMMENT___NEW_ITEMS*/
+	/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS*/
 	'ArtiExampleViewExampleNotes' => [
 		'toolbar' => [
 			'iconClass' => 'icon-cube',
@@ -68,6 +65,7 @@ $frameworkConfigurations = [
 			]
 		]
 	],
+	/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS_END*/
 ];
 
 

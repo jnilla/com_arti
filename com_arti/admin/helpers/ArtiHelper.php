@@ -96,6 +96,10 @@ class ArtiHelper{
 			['update_file_package_title', $package['title']],
 			['update_file_package_description', $package['description']],
 			['update_file_package_filename', "com_$packageNameInLowerCaseNoSpace"],
+			['/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS_END*/', ''],
+			['/*DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS*/', ''],
+			['#DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS_END', ''],
+			['#DO_NOT_DELETE_THIS_COMMENT___CRUD_VIEWS', ''],
 			// ['xxxxxx', 2222222],
 			// ['xxxxxx', 2222222],
 			// ['xxxxxx', 2222222],
@@ -395,6 +399,33 @@ class ArtiHelper{
 	}
 
 	/**
+	 * Get a content block defined by two markers
+	 * 
+	 * Note: Just the content between the markers is returned, 
+	 * the markers themselves are excluded.
+	 *
+	 * @param string $content 
+	 * 		Content to work with
+	 * @param string $startMarker
+	 * 		Block starting marker
+	 * @param string $endMarker
+	 * 		Block ending marker
+	 *
+	 * @return Array
+	 */
+	public static function getContentBlock($content, $startMarker, $endMarker){
+		// Prepare data
+		$startMarker = preg_quote($startMarker, '/');
+		$endMarker = preg_quote($endMarker, '/');
+
+		// Get block
+		preg_match('/'.$startMarker.'(.*?)'.$endMarker.'/s', $content, $content);
+
+		return $content[1];
+	}
+	
+
+	/**
 	 * Replace file content
 	 *
 	 * @param String $path 
@@ -437,6 +468,42 @@ class ArtiHelper{
 
 		// Update file content
 		file_put_contents($path, $content);
+	}
+
+	/**
+	 * Replace content
+	 *
+	 * @param String $content 
+	 * 		Content to work with
+	 * @param Array $replacements
+	 * 		Search and replace text pairs
+	 *
+	 * @return string
+	 *     New content
+	 */
+	public static function replaceContent($content, $replacements){
+		$time = microtime(true);
+
+		// Prepare placeholders
+		foreach($replacements as $replacementKey => $replacement){
+			$search = $replacement[0];
+			$placeholder = "@@-placeholder-$replacementKey-$time-@@";
+			$search = preg_quote($search, '/');
+			$content = preg_replace('/'.$search.'/', $placeholder, $content, -1, $count);
+
+			if($count > 0){
+				$isMatch = true;
+			}
+		}
+
+		// Replace placeholders
+		foreach($replacements as $replacementKey => $replacement){
+			$replace = $replacement[1];
+			$placeholder = "@@-placeholder-$replacementKey-$time-@@";
+			$content = str_replace($placeholder, $replace, $content);
+		}
+
+		return $content;
 	}
 
 	/**
